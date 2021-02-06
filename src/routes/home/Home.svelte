@@ -1,59 +1,11 @@
 <script>
+  import Quote from './Quote.svelte';
   export let data;
   const { markdown } = data;
   const blogs = markdown.blog;
 </script>
 
 <style lang="postcss">
-  .banner {
-    @apply py-4 px-8 bg-yellow-400 rounded-lg mb-4;
-  }
-
-  .entries {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 3rem 0;
-  }
-
-  @media (min-width: 768px) {
-    .entries {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      margin: 3rem 0;
-    }
-    :global(.entries .entry) {
-      margin-right: 1rem;
-    }
-  }
-
-  :global(.entry) {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    background: white;
-  }
-  .about {
-    margin-bottom: 2rem;
-  }
-
-  @media (min-width: 768px) {
-    .hydrate {
-      display: grid;
-      grid-template-columns: 80% 20%;
-    }
-  }
-
-  .hooks {
-    display: grid;
-    grid-template-columns: 100%;
-  }
-
-  @media (min-width: 768px) {
-    .hooks {
-      grid-template-columns: 50% 50%;
-    }
-  }
 </style>
 
 <svelte:head>
@@ -63,15 +15,19 @@
 <section class="text-gray-600 body-font">
   <div class="container px-5 pt-24 mx-auto">
     <div class="flex flex-col w-full mb-12 text-center">
-      <h1 class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
+      <span class="mb-4 font-serif text-xl italic font-medium text-gray-900 sm:text-5xl title-font">
         <a href="https://adam.manuel.dev">Adam Manuel</a>'s Blog
-      </h1>
-      <p class="mx-auto text-base leading-relaxed lg:w-2/3">
-        This is my personal blog, I'll be posting about technical topics ranging from modern Web Components, to
-        distributed systems.
+      </span>
+      <p class="mx-auto text-lg font-light leading-relaxed lg:w-2/3">
+        This is my personal development blog, I'll be posting about technical topics ranging from modern Web Components,
+        to distributed systems. Thanks for reading!
       </p>
     </div>
   </div>
+</section>
+
+<section class="p-4 mb-12">
+  <Quote />
 </section>
 
 <div class="flex flex-col items-center justify-center">
@@ -81,7 +37,7 @@
       <a href={'/' + slug} class="text-black no-underline">
         <div class="flex flex-row flex-wrap items-center justify-between sm:flex-no-wrap">
           <div
-            class="flex flex-col flex-wrap items-start justify-start w-full space-x-0 space-y-3 sm:w-auto sm:space-y-0 sm:space-x-3 sm:items-center sm:flex-row">
+            class="flex-col flex-wrap items-start justify-start hidden w-full space-x-0 space-y-3 sm:flex sm:w-auto sm:space-y-0 sm:space-x-3 sm:items-center sm:flex-row">
             {#each frontmatter.tags as tag}
               <span
                 class="w-full px-4 py-2 text-xl font-light tracking-wider text-white no-underline capitalize bg-gray-700 rounded-full sm:w-auto">

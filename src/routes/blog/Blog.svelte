@@ -95,7 +95,12 @@
   <title>Adam's Blog: {frontmatter.title}</title>
 </svelte:head>
 <div class="flex flex-col items-start justify-start w-full h-full text-black">
-  <a href="/" class="">&LeftArrow; Home</a>
+  <a href="/" class="flex flex-row items-center justify-start space-x-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-12" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    </svg>
+    <span class="-mt-2 text-4xl underline">Home</span>
+  </a>
 
   <div class="pb-4 my-4 border-b border-gray-300 border-solid">
     <div class="flex flex-row items-center justify-center w-full">

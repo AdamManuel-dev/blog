@@ -3,9 +3,6 @@
 </script>
 
 <style>
-  :global(h1) {
-    font-style: italic;
-  }
   .container {
     margin: 0 auto;
     padding: 2rem;
