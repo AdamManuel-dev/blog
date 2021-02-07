@@ -93,6 +93,11 @@
 
 <svelte:head>
   <title>Adam's Blog: {frontmatter.title}</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content={frontmatter.excerpt} />
+  <meta name="keywords" content={frontmatter.tags.join(', ')} />
+  <meta name="author" content={frontmatter.author} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
 <div class="flex flex-col items-start justify-start w-full h-full text-black">
   <a href="/" class="flex flex-row items-center justify-start space-x-3">
