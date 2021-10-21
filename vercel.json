@@ -11,6 +11,14 @@
       "use": "@vercel/static"
     },
     {
+      "src": "public/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/*.js",
+      "use": "@vercel/static"
+    },
+    {
       "src": "api/*.js",
       "use": "@vercel/node"
     }
