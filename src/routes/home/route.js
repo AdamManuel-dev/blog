@@ -12,7 +12,7 @@ module.exports = {
     data.hookInterface = hookInterface;
     data.hookEntityDefinitions = hookEntityDefinitions;
 
-    newBlogs = data.markdown.blog.sort((a, b) => {
+    const newBlogs = data.markdown.blog.sort((a, b) => {
       if (a?.frontmatter?.title ?? '' < b?.frontmatter?.title ?? '') return -1;
       if (a?.frontmatter?.title ?? '' > b?.frontmatter?.title ?? '') return 1;
       return 0;
