@@ -44,21 +44,27 @@
   <div class="pb-3 mb-3 mr-4 border-b border-gray-300 border-solid">
     <span class="hook-name">
       {#if hook.link && hook.link.length > 0}<a href={hook.link}>{hook.hook}</a>{:else}{hook.hook}{/if}
-    </span> : {hook.context}
+    </span>
+    :
+    {hook.context}
   </div>
   <div class="use">
     {@html hook.use}
   </div>
 
   <div class="list">
-    <strong>Props</strong> : {#each hook.props as prop}
+    <strong>Props</strong>
+    :
+    {#each hook.props as prop}
       <div class="code" data-balloon-length="medium" data-balloon-pos="up" aria-label={hookEntityDefinitions[prop]}>
         {prop}
       </div>
     {/each}
   </div>
   <div class="list">
-    <strong>Mutable</strong> : {#each hook.mutable as mutable}
+    <strong>Mutable</strong>
+    :
+    {#each hook.mutable as mutable}
       <div class="code" data-balloon-length="medium" data-balloon-pos="up" aria-label={hookEntityDefinitions[mutable]}>
         {mutable}
       </div>

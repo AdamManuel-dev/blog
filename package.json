@@ -16,8 +16,7 @@
     "dev:server": "nodemon",
     "eslint": "eslint --ext .js .",
     "eslint:fix": "eslint --fix --ext .js .",
-    "prettier:svelte": "prettier --write --plugin-search-dir=. ./**/*.svelte",
-    "deploy": "cd public && vercel"
+    "prettier:svelte": "prettier --write --plugin-search-dir=. ./**/*.svelte"
   },
   "type": "commonjs",
   "engines": {
@@ -37,6 +36,7 @@
     "gray-matter": "^4.0.2",
     "intersection-observer": "^0.11.0",
     "markdown-js": "^0.0.4",
+    "node-fetch": "^3.0.0",
     "polka": "^0.5.2",
     "remark": "^12.0.1",
     "remark-html": "^12.0.0",
